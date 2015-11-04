@@ -25,7 +25,7 @@ if (hasGetUserMedia()) {
 }
 
 
-console.log('navigator', navigator);
+
   // Put video listeners into place
   if(navigator.getUserMedia) { // Standard
     navigator.getUserMedia(videoObj, function(stream) {
@@ -33,9 +33,9 @@ console.log('navigator', navigator);
       video.play();
     }, errBack);
   } else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
-      console.log('navigator.webkitGetUserMedia ', navigator.webkitGetUserMedia);
+
     navigator.webkitGetUserMedia(videoObj, function(stream){
-      console.log('stream ', stream)
+
       video.src = window.webkitURL.createObjectURL(stream);
       // video.src = window.URL.createObjectURL(localMediaStream);
       video.play();
